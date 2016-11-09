@@ -12,4 +12,18 @@ function save_options() {
   });
 }
 
+// Restores credential state using the preferences
+// stored in chrome.storage.
+function restore_options() {
+  chrome.storage.sync.get({
+    username: '@scrl.irisnet.be',
+    password: ''
+  }, function(items) {
+    document.getElementById('username').value = items.username;
+    document.getElementById('password').value = items.password;
+  });
+}
+
+restore_options();
+
 document.getElementById('save').addEventListener('click',save_options);
