@@ -6,10 +6,10 @@ function save_options() {
     password: document.getElementById('password').value
   }, function() {
     // Update status to let user know options were saved.
-    document.getElementById('status').innerHTML = 'Option Saved.';
+    document.getElementById('status').classList.add('fadeinout');
     setTimeout(function() {
-      document.getElementById('status').innerHTML = '';
-    }, 750);
+      document.getElementById('status').classList.remove('fadeinout');
+    }, 5000);
   });
 }
 
