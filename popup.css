@@ -94,3 +94,14 @@ input[type='text']:focus,input[type='password']:focus {
   border: 1px solid transparent;
   border-radius: 4px;
 }
+
+#status {
+  opacity: 0;
+}
+.fadeinout {
+    animation: fadeinout 4s linear forwards;
+    opacity: 0;
+}
+@keyframes fadeinout {
+  25%,75% { opacity: 1; }
+}
