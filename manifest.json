@@ -4,4 +4,11 @@
   "name": "Escaux Credential",
   "description": "Automatic login to escaux",
   "version": "Beta-1",
+  
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ]
 }
