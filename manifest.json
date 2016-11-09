@@ -3,7 +3,7 @@
 
   "name": "Escaux Credential",
   "description": "Automatic login to escaux",
-  "version": "Beta-2",
+  "version": "Beta-3",
   
   "browser_action": {
     "default_popup": "popup.html"
