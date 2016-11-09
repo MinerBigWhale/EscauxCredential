@@ -1,8 +1,15 @@
 // Saves options to chrome.storage
 function save_options() {
   chrome.storage.sync.set({
-    auto: document.getElementById('auto').checked
-  }, function() {}, 750);
+    auto: document.getElementById('auto').checked,
+    username: document.getElementById('username').value,
+    password: document.getElementById('password').value
+  }, function() {
+    // Update status to let user know options were saved.
+    document.getElementById('status').innerHTML = 'Option Saved.';
+    setTimeout(function() {
+      document.getElementById('status').innerHTML = '';
+    }, 750);
   });
 }
 
@@ -10,9 +17,13 @@ function save_options() {
 // stored in chrome.storage.
 function restore_options() {
   chrome.storage.sync.get({
-    auto: true
+    auto: true,
+    username: '@scrl.irisnet.be',
+    password: ''
   }, function(items) {
     document.getElementById('auto').checked = items.auto;
+    document.getElementById('username').value = items.username;
+    document.getElementById('password').value = items.password;
   });
 }
 
