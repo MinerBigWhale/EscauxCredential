@@ -12,7 +12,13 @@
   },
   "content_scripts": [
     {
-      "matches" : ["*://smp.stable-4.smptel.irisnet.be/*login.php*"],
+      "matches" : [
+        "*://*.smptel.irisnet.be/",
+        "*://*.smptel.irisnet.be/login.php",
+        "*://*.smptel.irisnet.be/login.php*",
+        "*://*.smptel.irisnet.be/*/login.php",
+        "*://*.smptel.irisnet.be/*/login.php*"
+      ],
       "js":["background.js"]
     }
   ],
